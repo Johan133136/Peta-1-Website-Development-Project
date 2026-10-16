@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    line-height: 1.6;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    background: #101010;
+    border-right: 1px solid #292929;
+    padding: 25px 15px;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.logo span {
+    color: #00e5ff;
+}
+
+.nav-title {
+    color: #666;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 10px 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: #cfcfcf;
+    text-decoration: none;
+    padding: 13px 15px;
+    margin-bottom: 6px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #00e5ff;
+    color: #000;
+    transform: translateX(4px);
+}
+
+
+.main {
+    margin-left: 230px;
+    padding: 30px;
+    max-width: 1500px;
+}
+
+
+.hero {
+    min-height: 430px;
+    background: linear-gradient(
+        135deg,
+        #050505,
+        #101010,
+        #003b45
+    );
+
+    border: 1px solid #242424;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "TECH";
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    font-size: 180px;
+    font-weight: bold;
+    color: rgba(0, 229, 255, 0.04);
+}
+
+.badge {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #00e5ff;
+    border-radius: 20px;
+    color: #00e5ff;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.hero h1 span {
+    color: #00e5ff;
+}
+
+.hero p {
+    color: #bcbcbc;
+    font-size: 18px;
+    max-width: 680px;
+}
+
+.hero-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 30px;
+    padding: 13px 23px;
+    background: #00e5ff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+.section {
+    margin-top: 55px;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    color: #888;
+    margin-bottom: 25px;
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.stat {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: #00e5ff;
+    font-size: 30px;
+}
+
+.stat p {
+    color: #888;
+    font-size: 13px;
+}
+
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.category {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.category:hover {
+    border-color: #00e5ff;
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    color: #00e5ff;
+    margin-bottom: 8px;
+}
+
+.category p {
+    color: #999;
+    font-size: 14px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #00e5ff;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.card .learn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00e5ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.tip-container {
+    max-width: 950px;
+}
+
+.tip {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.tip-number {
+    color: #00e5ff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tip h2 {
+    margin: 8px 0 12px;
+}
+
+.tip p {
+    color: #aaa;
+}
+
+.tip strong {
+    color: white;
+}
+
+.tip-box {
+    background: #0b2024;
+    border-left: 3px solid #00e5ff;
+    padding: 15px;
+    margin-top: 18px;
+    color: #ccc;
+}
+
+
+.quick-tips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.quick {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.quick h3 {
+    color: #00e5ff;
+    margin-bottom: 7px;
+}
+
+.quick p {
+    color: #999;
+    font-size: 14px;
+}
+
+.warning {
+    background: #171313;
+    border: 1px solid #4a2929;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.warning h3 {
+    color: #ff7676;
+    margin-bottom: 10px;
+}
+
+.warning li {
+    color: #aaa;
+    margin: 8px 0 0 20px;
+}
+
+
+footer {
+    margin-top: 70px;
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #222;
+}
+
+footer span {
+    color: #00e5ff;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 35px 25px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .categories,
+    .cards,
+    .quick-tips,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+        .tips-hero {
+            padding: 55px 35px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 22px;
+            background: linear-gradient(135deg, #101d31, #080d18);
+        }
+
+        .tips-hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin: 18px 0;
+        }
+
+        .tips-hero h1 span {
+            color: #00e5ff;
+        }
+
+        .tips-hero p {
+            max-width: 650px;
+            line-height: 1.8;
+            color: #b7c5d8;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .tips-card {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            min-width: 0;
+            text-decoration: none;
+            color: #f4f8ff;
+            background: #101827;
+            border: 1px solid #24364c;
+            border-radius: 16px;
+            transition: transform 0.25s, border-color 0.25s;
+        }
+
+        .tips-card:hover {
+            transform: translateY(-5px);
+            border-color: #00e5ff;
+        }
+
+        .tips-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .tips-card h2 {
+            font-size: 20px;
+            margin: 0 0 12px;
+        }
+
+        .tips-card p {
+            color: #b7c5d8;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .tips-card span:last-child {
+            color: #00e5ff;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            color: #00e5ff;
+            text-decoration: none;
+            border: 1px solid #00e5ff;
+            border-radius: 9px;
+        }
+
+        .back-link:hover {
+            color: #080d18;
+            background: #00e5ff;
+        }
+
+        @media (max-width: 900px) {
+            .tips-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tips-hero {
+                padding: 30px 20px;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-card {
+                padding: 22px;
+            }
+        }
+    
